@@ -20,7 +20,7 @@ export const SET_CURRENT_PAGE = 'SET_CURRENT_PAGE'
 export const getGames = () => async (dispatch) => {
   try {
     // Hacemos una solicitud GET al servidor
-    const response = await axios.get(`http://localhost:3001/videogames`)
+    const response = await axios.get(`/videogames`)
     // Si la solicitud es exitosa, llamamos al 'dispatch' para actualizar el estado de la aplicación con los datos de los juegos que se recibieron del servidor (response.data)
     dispatch({
       type: GET_GAMES, // Action type
@@ -40,7 +40,7 @@ export const searchGame = (name) => async (dispatch) => {
   try {
     // Hacemos una solicitud GET al servidor
     const response = await axios.get(
-      `http://localhost:3001/videogames/?name=${name}`
+      `/videogames/?name=${name}`
     )
     // Si la solicitud es exitosa, llamamos al 'dispatch' para actualizar el estado de la aplicación con los datos de los juegos que se recibieron del servidor (response.data)
     dispatch({
@@ -60,7 +60,7 @@ export const searchGame = (name) => async (dispatch) => {
 export const getGame = (id) => async (dispatch) => {
   try {
     // Hacemos una solicitud GET al servidor
-    const response = await axios.get(`http://localhost:3001/videogame/${id}`)
+    const response = await axios.get(`/videogame/${id}`)
     // Si la solicitud es exitosa, llamamos al 'dispatch' para actualizar el estado de la aplicación con los datos de los juegos que se recibieron del servidor (response.data)
     dispatch({
       type: GET_GAME, // Action type
@@ -79,7 +79,7 @@ export const getGame = (id) => async (dispatch) => {
 export const getGenres = () => async (dispatch) => {
   try {
     // Hacemos una solicitud GET al servidor
-    const response = await axios.get(`http://localhost:3001/genres/get`)
+    const response = await axios.get(`/genres/get`)
     // Si la solicitud es exitosa, llamamos al 'dispatch' para actualizar el estado de la aplicación con los datos de los juegos que se recibieron del servidor (response.data)
     dispatch({
       type: GET_GENRES, // Action type
@@ -99,7 +99,7 @@ export const addGame = (gameData) => async (dispatch) => {
   try {
     // Hacemos una solicitud POST al servidor enviando los datos del juego (gameData)
     const response = await axios.post(
-      `http://localhost:3001/videogames/`, //URL del servidor
+      `/videogames/`, //URL del servidor
       gameData, //Datos del juego
       {
         headers: {
