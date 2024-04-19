@@ -11,7 +11,7 @@ import './App.css';
 import axios from 'axios'
 
 //axios.defaults.baseURL = 'http://localhost:3001/';//
-axios.default.baseURL = 'https://vercel.com/karina-pospos-projects/backend-de-prueba/GsNVEk7UEwqD7rCx92h2HGFSZVUy';
+axios.defaults.baseURL = 'https://vercel.com/karina-pospos-projects/backend-de-prueba/GsNVEk7UEwqD7rCx92h2HGFSZVUy';
 
 function App() {
   const location = useLocation()
