@@ -20,7 +20,7 @@ export const SET_CURRENT_PAGE = 'SET_CURRENT_PAGE'
 export const getGames = () => async (dispatch) => {
   try {
     // Hacemos una solicitud GET al servidor
-    const response = await axios.get(`/videogames`)
+    const response = await axios.get(`/videogames/`)
     // Si la solicitud es exitosa, llamamos al 'dispatch' para actualizar el estado de la aplicación con los datos de los juegos que se recibieron del servidor (response.data)
     dispatch({
       type: GET_GAMES, // Action type
